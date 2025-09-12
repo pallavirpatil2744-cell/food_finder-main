@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        body{
+            background-image: url("https://t4.ftcdn.net/jpg/02/44/69/87/360_F_244698725_uWdUNY1oiaHthwcb1NK6IqtPuRNKHor2.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .box{
+            height: 450px;
+            width: 400px;
+            border:1px solid rgb(193, 193, 208);
+            background: transparent;
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            display: flex;
+            justify-content: center;
+           
+        }
+        h2{
+            color: rgb(236, 228, 228);
+            font-size: 25px;
+            text-align: center;
+            align-content: center;
+            margin-top: 10px;
+        }
+        input{
+            color: aliceblue;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: large;
+        }
+        .inputbox{
+            width: 100%;
+            position: relative;
+            border-bottom: 2px solid rgb(197, 179, 179);
+            margin-top: 30px;
+        }
+        .inputbox label{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            color: rgb(210, 219, 227);
+            font-size: 1.2em;
+            transition: 0.4s;
+        }
+        .inputbox input{
+            width: 100%;
+            height: 20px;
+            padding: 35px 0px 15px;
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        input:focus~label{
+            top: -15px;
+        }
+        .forgot{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        .forgot label{
+            color: rgb(233, 223, 223);
+        }
+        .forgot a{
+            text-decoration: none;
+            color: rgb(236, 226, 226);
+        }
+        button{
+             width:100% ;
+             height: 30px;
+             margin-top: 60px;
+             border-radius: 20px;
+             border: none;
+             font-size: large;
+             font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        button:hover {
+            background-color: gray;
+        }
+        form{
+            width: 300px;
+        }
+        .register p,a{
+            color: rgb(17, 2, 2);
+            font-size: 17px;
+            margin-top: 20px;
+            align-content: center;
+            text-align: center;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form action="">
+       <h2>LOGIN</h2>
+       <div  class="inputbox">
+           <input type="email" name="email">
+           <label for="email" class="label">Email</label>
+       </div>
+       <div class="inputbox">
+           <input type="password" name="password">
+           <label for="password" class="password">Password</label>
+        </div>
+        <div class="forgot">
+            <label for="">
+                <input type="checkbox">Rememberme
+            </label>
+            <label for="">
+                <a href="">Forgot Password</a>
+            </label>
+        </div>
+           
+           <button><a href="index.html">Login</a></button>
+           <div class="register">
+           </div>
+
+           
+       </form>
+   </div>
+</body>
+</html>

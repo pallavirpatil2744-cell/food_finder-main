@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Food Order</title>
+    <link rel="stylesheet" href="order1.css">
+</head>
+<body>
+    <header>        
+
+        <h1>Online Food Order</h1>
+        <p>Choose your favorite meal and order now!</p>
+        <h2><a href="index.html">back</a></h2>
+
+    </header>
+
+    <section class="menu">
+        <h2>Our Menu</h2>
+        <div class="food-item">
+            <img src="https://media.istockphoto.com/id/1309352410/photo/cheeseburger-with-tomato-and-lettuce-on-wooden-board.jpg?s=612x612&w=0&k=20&c=lfsA0dHDMQdam2M1yvva0_RXfjAyp4gyLtx4YUJmXgg=" alt="Burger">
+            <h3>Burger</h3>
+            <p>Rs.90</p>
+            <button onclick="addToCart('Burger', 90)">Add to Cart</button>
+        </div>
+        <div class="food-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLah-8FqP3JSNbjvPm1lPqMrkz5Q2JaY2vBQ&s" alt="Pizza">
+            <h3>Pizza</h3>
+            <p>Rs.100</p>
+            <button onclick="addToCart('Pizza', 100)">Add to Cart</button>
+        </div>
+        <div class="food-item">
+            <img src="https://static.toiimg.com/thumb/58047116.cms?width=1200&height=900" alt="Masala Rice">
+            <h3>Masala Rice</h3>
+            <p>Rs.60</p>
+            <button onclick="addToCart('Masala Rice', 60)">Add to Cart</button>
+        </div>
+        <div class="food-item">
+            <img src="https://www.awesomecuisine.com/wp-content/uploads/2009/06/Plain-Dosa.jpg">
+            <h3>Dosa</h3>
+            <p>Rs.50</p>
+            <button onclick="addToCart('Dosa', 50)">Add to Cart</button>
+        </div>
+        <div class="food-item">
+            <img src="https://img.sndimg.com/food/image/upload/f_auto,c_thumb,q_55,w_744,ar_5:4/v1/img/recipes/13/93/66/A1iJHQROK3lAAzXFhb3Q_file2%255B1%255D.jpeg" alt="Idli">
+            <h3>Idli</h3>
+            <p>Rs.50</p>
+            <button onclick="addToCart('Idli', 50)">Add to Cart</button>
+        </div>
+        <div class="food-item">
+            <img src="https://www.awesomecuisine.com/wp-content/uploads/2020/03/poori-masala-kizhangu-480x270.jpg" alt="Poori">
+            <h3>Poori</h3>
+            <p>Rs.60</p>
+            <button onclick="addToCart('Poori', 60)">Add to Cart</button>
+        </div>
+        <div class="food-item">
+            <img src="https://www.marionskitchen.com/wp-content/uploads/2023/02/Lamb-Biryani-02.jpg" alt="Biryani">
+            <h3>Biryani</h3>
+            <p>Rs.199</p>
+            <button onclick="addToCart('Biryani', 199)">Add to Cart</button>
+        </div>
+    </section>
+
+    <section class="order-form">
+        <h2>Your Order</h2>
+        <ul id="order-list"></ul>
+        <p id="total-price">Total: Rs.0.00</p>
+        <form action="submit.html" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" required></textarea>
+
+            <div><button><a href="submit.html">Place Order</a></button></div>
+        </form>
+    </section>
+
+    <script>
+        let order = [];
+        let total = 0;
+
+        function addToCart(item, price) {
+            order.push({ item, price });
+            total += price;
+            updateOrder();
+        }
+
+        function updateOrder() {
+            const orderList = document.getElementById('order-list');
+            orderList.innerHTML = '';
+            order.forEach((orderItem, index) => {
+                const li = document.createElement('li');
+                li.textContent = `${orderItem.item} - Rs${orderItem.price.toFixed(2)}`;
+                orderList.appendChild(li);
+            });
+            document.getElementById('total-price').textContent = `Total: $${total.toFixed(2)}`;
+        }
+    </script>
+</body>
+</html>

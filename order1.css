@@ -1,0 +1,115 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+header {
+    background-color: #e65727;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+h1 {
+    margin: 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.food-item {
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 150px;
+    text-align: center;
+}
+
+.food-item img {
+    width: 100%;
+    height: auto;
+}
+
+.food-item h3 {
+    margin: 10px 0;
+}
+
+.food-item p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+button {
+    background-color: #363968;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+a{
+    text-decoration: none;
+    color: #f9f9f9;
+
+}
+
+button:hover {
+    background-color: #0c0421;
+}
+
+.order-form {
+    background-color: #fff;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #ddd;
+    width: 50%;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-left: 400px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input, textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+}
+
+
+textarea {
+    resize: vertical;
+}
+
+button{
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 30px;
+    width: 50%;
+    justify-content: center;
+    align-content: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #446345;
+}
+.menu h2{
+    align-items: center;
+    text-align: center;
+    margin-top: 100px;
+}
