@@ -54,18 +54,18 @@ Untuk tata cara atau panduan ketika anda koding web ini adalah sebagai berikut.
 
   Nama folder harus seperti diatas, dengan huruf kecil semua dan dihubungkan dengan _underscore_ (\_) jika terdiri dari 2 kata atau lebih
 
-- Untuk menaruh file CSS dan Javascript, taruh di folder node_modules dan taruh di tempat yang sudah disediakan. Contoh:
+- Untuk menaruh file CSS dan Javascript, taruh di folder other_assets dan taruh di tempat yang sudah disediakan. Contoh:
 
   CSS
 
   ```markdown
-  node_modules/css/nama_file.css
+  other_assets/css/nama_file.css
   ```
 
   Javascript
 
   ```markdown
-  node_modules/js/nama_file.js
+  other_assets/js/nama_file.js
   ```
 
 - Untuk menamai file, dibagi menjadi 3 bagian:

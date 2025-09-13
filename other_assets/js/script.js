@@ -11,7 +11,7 @@ $(document).ready(function () {
   // Fungsi untuk mengambil dan menampilkan data dari JSON
   function loadRestaurants(city) {
     $.ajax({
-      url: "node_modules/json/restaurant_list.json",
+      url: "other_assets/json/restaurant_list.json",
       method: "GET",
       dataType: "json",
       success: function (data) {
